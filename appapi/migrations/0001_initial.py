@@ -216,7 +216,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('date_paiement', models.DateTimeField(auto_now_add=True, null=True)),
-                ('montant', models.DecimalField(decimal_places=2, max_digits=10000, null=True)),
+                ('montant', models.DecimalField(decimal_places=2, max_digits=1000, null=True)),
                 ('moyen_paiement', models.CharField(max_length=50, null=True)),
                 ('location', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='appapi.location')),
                 ('vente', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='appapi.vente')),
